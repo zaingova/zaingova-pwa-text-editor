@@ -13,7 +13,7 @@ This is a simple text editor that allows you to enter text, and when you either 
 
 ### A video of the app in action; both deployed to Heroku and used offline as a downloadable application
 
-
+https://github.com/zaingova/zaingova-pwa-text-editor/assets/127261218/76dd990c-cfc0-43a5-9732-5060cbebe898
 
 ## Usage
 
