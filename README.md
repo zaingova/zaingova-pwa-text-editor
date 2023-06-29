@@ -3,6 +3,8 @@
 
 ## Description
 
+[Click here to see the deployed application!](https://salty-beach-18613-c3f440d62eae.herokuapp.com/)
+
 This is a simple text editor that allows you to enter text, and when you either click somewhere else/leave the page and come back, the text will remain. Additionally, the user is able to downloadd the application and use it offline. This is done using webpacks and service workers.
 
 ## Visuals
