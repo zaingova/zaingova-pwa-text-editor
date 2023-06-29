@@ -23,6 +23,8 @@ Since this app is deployed to Heroku, all you need to do to use it is to follow 
 
 Something else to note is that data will persist between the executable and the Heroku page!
 
+Additionally, the editor comes with JavaScript syntax highlighting! The usefulness of this is limited but if you notice certain words are different colors, that's why.
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
