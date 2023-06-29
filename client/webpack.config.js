@@ -18,12 +18,52 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      new WebpackPwaManifest({
+        name: 'Just a Text Editor',
+        short_name: 'JATE',
+        description: 'Text editor application that can be used offline!',
+        background_color: '#7eb4e2',
+        theme_color: '#7eb4e2',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('src', 'icons'),
+          },
+        ],
+      }),
+      new HtmlWebpackPlugin({
+        // index.html source
+        template: './index.html',
+        title: 'JATE'
+      }),
+      new InjectManifest({
+        // service worker source
+        swSrc: './src-sw.js',
+      }),
     ],
 
     module: {
       rules: [
-        
+        // add css loader to webpack
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        // add babel loaders to webpack
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
+        },
       ],
     },
   };
